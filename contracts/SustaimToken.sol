@@ -54,7 +54,9 @@ contract SustaimToken is ERC1155, AccessControl {
     // Set string inputs to external functions from memory location to calldata
     // There is no need to load from calldata into memory
 
-    // Avoid unecessary rewrites where possible and apply fix on line 132
+    // Avoid unecessary rewrites to storage where possible => apply fix on line 134
+
+    // Add some events -> this is how you normally read/listen for info off the chain
 
     function supportsInterface(bytes4 interfaceId)
         public
